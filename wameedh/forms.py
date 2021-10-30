@@ -67,3 +67,40 @@ class Aplly(forms.ModelForm):
     class Meta:
         model=ApplicationFormBootcamp
         fields=["first_name","last_name","email","why","place_living","major_of_study","year_of_study","phone_number"]
+
+
+
+class Contact(forms.ModelForm):
+    first_name= forms.CharField(widget=forms.TextInput(attrs={
+        "class":"required form-control",
+        "id":"fname",
+        "name":"fname",
+        "placeholder":"First Name *"
+        }))
+
+    last_name= forms.CharField(widget=forms.TextInput(attrs={
+        "class":"required form-control",
+        "id":"lname",
+        "name":"lname",
+        "placeholder":"Last Name *"
+        }))
+    email= forms.CharField(widget=forms.EmailInput(attrs={
+        "class":"required form-control h5-email",
+        "id":"contactEmail",
+        "name":"contactEmail",
+        "placeholder":"Email *"
+        }))
+    
+    query= forms.CharField(widget=forms.Textarea(attrs={
+        "class":"required form-control",
+        "id":"comment",
+        "name":"comment",
+        "placeholder":"Type your message here *"
+        }))
+
+    
+    
+
+    class Meta:
+        model=ContactUs
+        fields=["first_name","last_name","email","query"]

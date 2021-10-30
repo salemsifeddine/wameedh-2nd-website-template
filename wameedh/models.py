@@ -45,7 +45,12 @@ class ApplicationFormBootcamp(models.Model):
     major_of_study=models.CharField(max_length=50);
     year_of_study=models.CharField(max_length=50);
     why=models.TextField(max_length=5000);
-    # phone_regex = RegexValidator(regex=r'^\+?1?\d{6,10}$', message="Phone number must be entered in the format: '+213'. Up to 10 digits allowed.")
-    # phone_number = models.CharField(validators=[phone_regex], max_length=10, blank=True) # validators should be a list
     phone_number = PhoneNumberField(blank=True,)
+
+class ContactUs(models.Model):
+    first_name=models.CharField(max_length=50);
+    last_name=models.CharField(max_length=50);
+    email=models.EmailField(max_length=50);
+    query=models.TextField(max_length=5000);
+    
 

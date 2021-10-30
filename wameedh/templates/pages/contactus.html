@@ -58,37 +58,36 @@
     <div class="row contact-fields">
     <div class="col-md-8 left-form">
        <form method="post" action="">
+          {% csrf_token %}
           <div class="form-group">
              <label class="sr-only" for="fname">First Name *</label>
-             <input class="required form-control" id="fname" name="fname" placeholder="First Name&nbsp;*" type="text">
+             <!-- <input class="required form-control" id="fname" name="fname" placeholder="First Name&nbsp;*" type="text"> -->
+             {{forms.first_name}}
+          
           </div>
           <div class="form-group">
              <label class="sr-only" for="lname">Last Name *</label>
-             <input class="required form-control" id="lname" name="lname" placeholder="Last Name&nbsp;*" type="text">
+             <!-- <input class="required form-control" id="lname" name="lname" placeholder="Last Name&nbsp;*" type="text"> -->
+             {{forms.last_name}}
           </div>
           <div class="form-group">
              <label class="sr-only" for="contactEmail">Email *</label>
-             <input class="required form-control h5-email" id="contactEmail" name="contactEmail" placeholder="Email&nbsp;*" type="text">
-          </div>
-          <div class="form-group">
-             <label class="sr-only" for="contactPhone">Phone *</label>
-             <input class="required form-control h5-phone" id="contactPhone" name="contactPhone" placeholder="Phone&nbsp;*" type="text">
+             <!-- <input class="required form-control h5-email" id="contactEmail" name="contactEmail" placeholder="Email&nbsp;*" type="text"> -->
+             {{forms.email}}
           </div>
           <div class="form-group">
              <label class="sr-only" for="comment">Type your message here</label>
-             <textarea class="required form-control" id="comment" name="comment" placeholder="Type your message here&nbsp;*" rows="6"></textarea>
+             <!-- <textarea class="required form-control" id="comment" name="comment" placeholder="Type your message here&nbsp;*" rows="6"></textarea> -->
+             {{forms.query}}
           </div>
           <button class="btn btn-accent blue" type="submit">Submit</button>  
        </form>
     </div>
     <div class="col-md-4 contact-info">
-    <div class="phone">
-       <h2>Call</h2>
-       <a href="tel:+4046872730">555.555.5555</a>
-    </div>
+    
     <div class="email">
        <h2>Email</h2>
-       <a href="mailto:info@decidedekalb.com">info@webcorpco.com</a>
+       <a href="mailto:wameedh.sc@gmail.com">wameedh.sc@gmail.com</a>
     </div>
     <div class="location">
        <h2>Visit</h2>
@@ -99,7 +98,7 @@
           Boumerdes, Algeria
           <br>
        </p>
-        
+        <br>
            <div class="col-md-8" style="width: 350px;height: 250px">
               <!-- Map -->
               <!-- https://www.google.com/maps/place/Wameedh+Scientific+Club/@36.7571188,3.4705802,696m/data=!3m1!1e3!4m9!1m2!2m1!1swameedh!3m5!1s0x128e68ec29ee8813:0x27c9c40649d3999c!8m2!3d36.7582789!4d3.4729321!15sCgd3YW1lZWRokgEEY2x1Yg?hl=en -->
