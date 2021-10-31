@@ -67,7 +67,7 @@ html {
 }
 .btn {
     width: 150px;
-    height: 80px;
+    height: 60px;
     margin: auto;
     font-weight: bolder;
     background-color: white;
@@ -245,8 +245,10 @@ article p {
     zoom: 1.0 ;
 }*/
 @media screen and (max-width:1200px) {
+    
+    
     .container {
-        padding: 0;
+        padding: 15px;
     }
     .logo a {
         font-size: 20px;
@@ -396,6 +398,14 @@ article p {
     .btn {
         width: 50%;
     }
+    .blue{
+        height: 6vh;
+        width: 120px;
+        text-align: center;
+        padding: 0;
+        border-radius:2px;
+        
+    }
     .main-info .about {
         width: 90%;
         margin-left: 20px;
@@ -466,27 +476,21 @@ article p {
 }
 
 
-.container {
-    width: 60vw;
-    height: 100vh;
-   
-    
-    
-    justify-content: center;
-   
-  }
+
   
-  .container  h1 {
+  .context  h1 {
     color: white;
-    font-size: 6em;
+    font-size:  10em;
     font-weight: bolder;
-    font-family: fantasy;
+    font-family: popins,sans-serif;
     letter-spacing: 2px;
     text-align: start;
-    margin-top: 30vh;
+    /* margin-top: 30vh; */
+ 
+    text-align: center
   }
   
-  .container  h1 span {
+  .context  h1 span {
     text-shadow: 0px 0px 10px aqua, 0px 0px 40px aqua, 0px 0px 80px aqua,
       0px 0px 120px aqua, 0px 0px 160px aqua, 0px 0px 200px aqua,
       0px 0px 240px aqua, 0px 0px 320px aqua;
@@ -494,32 +498,32 @@ article p {
     animation: animate 6s linear infinite;
   }
   
-  .container  h1 span:nth-child(1) {
+  .context  h1 span:nth-child(1) {
     animation-delay: 0s;
   }
   
-  .container  h1 span:nth-child(2) {
-    animation-delay: 0.3s;
+  .context  h1 span:nth-child(2) {
+    animation-delay: 0.2s;
   }
   
-  .container  h1 span:nth-child(3) {
+  .context  h1 span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .context  h1 span:nth-child(4) {
     animation-delay: 0.6s;
   }
   
-  .container  h1 span:nth-child(4) {
-    animation-delay: 0.9s;
+  .context  h1 span:nth-child(5) {
+    animation-delay: 1s;
   }
   
-  .container  h1 span:nth-child(5) {
+  .context  h1 span:nth-child(6) {
     animation-delay: 1.2s;
   }
   
-  .container  h1 span:nth-child(6) {
-    animation-delay: 1.5s;
-  }
-  
-  .container  h1 span:nth-child(7) {
-    animation-delay: 1.8s;
+  .context  h1 span:nth-child(7) {
+    animation-delay: 1.3s;
   }
   
   @keyframes animate {
@@ -546,4 +550,8 @@ body{
 .blockcontent{
     width: 100%;
     min-height: 100vh
+}
+
+button{
+    cursor: pointer;
 }

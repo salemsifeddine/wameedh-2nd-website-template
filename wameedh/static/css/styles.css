@@ -103,15 +103,15 @@ body{
 .intro {
     display: flex;
     color: white;
-    padding-left: 11vw;
+    padding-left: 25.5vw;
 
   }
   
   .typing {
     position: relative;
-    
+    font-size: 20px;
     text-align:center;
-    
+    color: #fff;
   }
   
   .typing::after {
@@ -208,7 +208,7 @@ iframe{
   }
   .context h3{
     
-    font-size:30px;
+    font-size:28px;
   }
 .area {
     /* background: white; */
@@ -1946,3 +1946,12 @@ a{
 
 
 /* ------------------- NAVBAR ENDS ------------------- */
+
+.header-left a{
+    color:#fff;
+    text-decoration: none
+}
+.header-left a:hover{
+    color:#fff;
+    text-decoration: none
+}

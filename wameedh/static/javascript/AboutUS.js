@@ -155,3 +155,4 @@ anchorsnav.forEach(ele=>ele.addEventListener("click",function(e){
   
   this.style.color = "#fff"
 }))
+
