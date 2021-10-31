@@ -74,14 +74,14 @@
     max-width: 1360px;
 }
 h2 {
-    font-family: 'Raleway', sans-serif;
+    
     font-weight: 900;
     color: #101f1d;
     font-size: 35px;
     letter-spacing: 1.25px;
 }
 .ct-section-head {
-    font-family: 'Raleway', sans-serif;
+   
     font-weight: 900;
     color: #101f1d;
     font-size: 35px;
@@ -91,7 +91,7 @@ h2 {
     margin-bottom: 5px;
 }
 .ct-section-header {
-    font-family: 'Raleway', sans-serif;
+   
     font-weight: 900;
     color: #101f1d;
     font-size: 35px;
@@ -123,7 +123,7 @@ a {
     padding-top: 25px;
 }
 .ct-newsletter-inline__facebook span, .ct-newsletter-inline__twitter span {
-    font-family: 'Raleway', sans-serif;
+   
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 600;
@@ -142,7 +142,7 @@ a {
     padding-top: 25px;
 }
 .ct-newsletter-inline__facebook span, .ct-newsletter-inline__twitter span {
-    font-family: 'Raleway', sans-serif;
+   
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 600;
@@ -183,7 +183,7 @@ a {
 }
 .ct-newsletter-inline__form .form-inline .btn {
     width: 137px;
-    font-family: 'Oswald', sans-serif;
+    
     font-size: 25px;
     padding-left: 0;
     padding-right: 3px;
@@ -214,4 +214,10 @@ a {
   .contact-info {
     padding-left: 110px;
   }
+  
 }
+
+.active{
+  color: #fff;
+}
+

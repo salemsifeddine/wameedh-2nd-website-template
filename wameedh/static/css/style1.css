@@ -126,8 +126,8 @@ article p {
     color: #333;
 }
 .wrapper {
-    background-color: white;
-    color: black;
+    
+    color: #333;
     
 }
 .wrapper h1 {
@@ -373,7 +373,7 @@ article p {
     }
 }
 @media screen and (max-width:414px) {
-
+    
     .main-info {
         /*width: 100%;*/
         height: max-content;
@@ -449,6 +449,8 @@ article p {
         width: 320px;
         height: 200px;
     }
+
+    
 }
 
 .home-first{

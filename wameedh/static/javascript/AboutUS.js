@@ -147,3 +147,11 @@ render() {
 }}
 // ReactDOM.render(React.createElement(App, null), document.querySelector(".wrapper"));
 
+
+
+var anchorsnav = document.querySelectorAll('#linav')
+
+anchorsnav.forEach(ele=>ele.addEventListener("click",function(e){
+  
+  this.style.color = "#fff"
+}))

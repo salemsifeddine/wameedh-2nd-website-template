@@ -33,7 +33,7 @@ body{
     font-size: 16px;
     z-index: 1000;
     top: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
 }
 
 .header-left {
@@ -73,67 +73,108 @@ body{
 }
 
 
-/* Media - Queries */
-
-@media screen and (min-width: 769px) {
-    .nav-toggle-label {
-        display: none;
-    }
+.imgabout{
+    width:50%;
+    height: 330px;
+    margin: auto;
+    background: #333;
+    border-radius: 3px;
+}
+.imgabt{
+    width:100%;
+    height: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.imgabt img{
+    width:100%;
+    height: 100%;
+    transition: transform .2s ease-out;
 }
 
-@media all and (max-width: 1024px) {
-    .header-left img {
-        height: 36px;
-    }
-    .header-right-link {
-        font-size: 18px;
-        margin-right: 5px;
-    }
-    .header-left {
-        margin-top: 8px;
-    }
-    .header-right {
-        margin-top: 14px;
-    }
+.imgabt img:hover{
+    transform: scale(1.2);
 }
 
-@media all and (max-width: 769px) {
-    .header-left {
-        width: 100%;
-        justify-content: space-around;
-    }
-    .header-right {
-        flex-wrap: nowrap;
-        overflow: hidden;
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    .header-right-link {
-        margin: 0;
-        margin-top: 4px;
-        display: flex;
-        justify-content: space-around;
-        padding-bottom: 5px;
-    }
-    .header-right-link a {
-        margin: 0 0 3px 0;
-    }
-    .nav-toggle:checked~.header-right {
-        display: block;
-    }
-    .nav-toggle-label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-top: 10px;
-        margin-left: 16px;
-    }
+.trusted{
+    height: 80vh;
 }
 
+.intro {
+    display: flex;
+    color: white;
+    padding-left: 11vw;
 
-/* ------------------- NAVBAR ENDS ------------------- */
+  }
+  
+  .typing {
+    position: relative;
+    
+    text-align:center;
+    
+  }
+  
+  .typing::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    width: 1px;
+    height: 100%;
+    border-right: 2px solid white;
+    animation: blink 0.5s infinite ease;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.left-form input{
+    border-radius:0;
+}
+
+iframe{
+    padding-right: 55px;
+}
+
+.blue{
+    background:#2196f3 !important;
+}
+
+.animatedproject{
+    backdrop-filter: blur(18px)
+}
+
+.forcss{
+    top:none;
+    transform:none
+}
+
+.forcss1{
+    top: 50%;
+    transform: translate(0%,50%);
+}
+
+.csss{
+    background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url("{% static 'images/projects/project1.png' %}") center / cover no-repeat;
+}
+
+.contact-info .img-event{
+    width: 100%;
+    height:350px;
+    margin-top: 10vh;
+    overflow:hidden
+}
+.contact-info .img-event img{
+    width: 100%;
+    height:100%;
+   }
+
+
 
 
 /* ------------------- ABOUT US STARTS ------------------- */
@@ -159,10 +200,16 @@ body{
 .context h1,
 .context h3 {
     text-align: center;
-    color: #333;
-    font-size: 50px;
+    color: #fff;
 }
-
+.context h1{
+    
+    font-size: 70px;
+  }
+  .context h3{
+    
+    font-size:30px;
+  }
 .area {
     /* background: white; */
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
@@ -523,7 +570,7 @@ body{
     /* background-color: white; */
     margin-left: 10%;
     padding-right: 7%;
-    font-family: 'Texturina', serif;
+    /* font-family: 'Texturina', serif; */
     /* background-color: #eeeeee; */
 }
 
@@ -535,7 +582,7 @@ body{
 
 .box {
     font-size: 20px;
-    font-family: 'Bangers', cursive;
+    /* font-family: 'Bangers', cursive; */
     width: 22vw;
     min-width: 200px;
     height: 22vh;
@@ -611,7 +658,7 @@ body{
 .house {
     cursor: pointer;
     font-size: 30px;
-    font-family: 'Oak', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* font-family: 'Oak', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
     font-weight: 700;
 }
 
@@ -663,7 +710,7 @@ body{
 .proj-title span {
     color: #333;
     font-size: 64px;
-    font-family: 'Goldman', cursive;
+    /* font-family: 'Goldman', cursive; */
 }
 
 .project-text {
@@ -684,7 +731,7 @@ body{
     font-size: 2rem;
     left: 10%;
     color: #333;
-    font-family: 'Texturina', serif;
+    /* font-family: 'Texturina', serif; */
 }
 
 
@@ -713,7 +760,7 @@ body{
 .team-title span {
     color: #333;
     font-size: 64px;
-    font-family: 'Goldman', cursive;
+    /* font-family: 'Goldman', cursive; */
 }
 
 .teams-text {
@@ -734,7 +781,7 @@ body{
     font-size: 2rem;
     left: 10%;
     color: #333;
-    font-family: 'Texturina', serif;
+    /* font-family: 'Texturina', serif; */
 }
 
 .team-content {
@@ -896,7 +943,7 @@ body{
 .gal-title span {
     color: #333;
     font-size: 64px;
-    font-family: 'Goldman', cursive;
+    /* font-family: 'Goldman', cursive; */
 }
 
 .gallery-text {
@@ -917,7 +964,7 @@ body{
     font-size: 2rem;
     left: 10%;
     color: #333;
-    font-family: 'Texturina', serif;
+    /* font-family: 'Texturina', serif; */
 }
 
 .refTable {
@@ -1035,7 +1082,7 @@ body{
 .con-title span {
     color: #333;
     font-size: 64px;
-    font-family: 'Goldman', cursive;
+    /* font-family: 'Goldman', cursive; */
 }
 
 .contact-text {
@@ -1056,7 +1103,7 @@ body{
     font-size: 2rem;
     left: 10%;
     color: #333;
-    font-family: 'Texturina', serif;
+    /* font-family: 'Texturina', serif; */
 }
 
 .contact-container1 {
@@ -1121,7 +1168,7 @@ body{
     padding-top: 25px;
     background-color: #222;
     width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
 }
 
 .container {
@@ -1157,35 +1204,6 @@ section {
     font-weight: 600;
 }
 
-
-/********** Extra small devices only **********/
-
-@media (min-height: 576px) and (max-width: 767px) {
-    /* Footer */
-    .panel-footer section {
-        text-align: center;
-    }
-    .panel-footer section hr {
-        width: 50%;
-    }
-    section {
-        border: 1px dotted grey;
-        width: 100%;
-    }
-    /* End Footer */
-}
-
-@media (max-width: 575px) {
-    #quick {
-        height: 155px;
-    }
-    #socia {
-        height: 210px;
-    }
-    #scroll {
-        height: 175px;
-    }
-}
 
 
 /* -------------------------- FOOTER ENDS ----------------------- */
@@ -1234,7 +1252,7 @@ section {
 }
 
 .project-card-list h1 {
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
     font-weight: 300;
 }
 
@@ -1253,7 +1271,7 @@ section {
 }
 
 .project-card-list .card .wrapper {
-    background-color: #fff;
+    /* background-color: #fff; */
     height: 400px;
     position: relative;
     overflow: hidden;
@@ -1320,7 +1338,7 @@ section {
 }
 
 .project-card-list .example-2 .header {
-    color: #000;
+    color: #333;
     padding: 1em;
 }
 
@@ -1340,16 +1358,16 @@ section {
 }
 
 .project-card-list .example-2 .data {
-    color: #000;
+    color: #333;
     transform: translateY(calc(70px + 4em));
 }
 
 .project-card-list .example-2 .data .author {
-    color: #000;
+    color: #333;
 }
 
 .project-card-list .example-2 .title a {
-    color: #000;
+    color: #333;
 }
 
 .project-card-list .example-2 .button {
@@ -1358,7 +1376,7 @@ section {
     margin: 2em auto 1em;
     text-align: center;
     font-size: 12px;
-    color: #000;
+    color: #333;
     line-height: 1;
     position: relative;
     font-weight: 700;
@@ -1401,14 +1419,14 @@ section {
 .project-header span {
     color: #333;
     font-size: 64px;
-    font-family: 'Goldman', cursive;
+    
 }
 
 .project-header p {
     font-size: 2rem;
     left: 10%;
     color: #333;
-    font-family: 'Texturina', serif;
+    /* font-family: 'Texturina', serif; */
 }
 
 
@@ -1425,7 +1443,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     background-color: #f1f1f1;
 }
 
@@ -1785,103 +1803,146 @@ a{
     align-items: center;
 }
 
-.imgabout{
-    width:50%;
-    height: 330px;
-    margin: auto;
-    background: #333;
-    border-radius: 3px;
-}
-.imgabt{
-    width:100%;
-    height: 100%;
-    border-radius: 3px;
-    overflow: hidden;
-}
-.imgabt img{
-    width:100%;
-    height: 100%;
-    transition: transform .2s ease-out;
-}
 
-.imgabt img:hover{
-    transform: scale(1.2);
-}
 
-.trusted{
-    height: 80vh;
-}
+/********** Extra small devices only **********/
 
-.intro {
-    display: flex;
-    color: white;
-    padding-left: 11vw;
-
-  }
-  
-  .typing {
-    position: relative;
-    
-    text-align:center;
-    
-  }
-  
-  .typing::after {
-    content: "";
-    position: absolute;
-    right: -5px;
-    width: 1px;
-    height: 100%;
-    border-right: 2px solid white;
-    animation: blink 0.5s infinite ease;
-  }
-  
-  @keyframes blink {
-    0% {
-      opacity: 0;
+@media (min-height: 576px) and (max-width: 767px) {
+    /* Footer */
+    .panel-footer section {
+        text-align: center;
     }
-    100% {
-      opacity: 1;
+    .panel-footer section hr {
+        width: 50%;
     }
-  }
-
-.left-form input{
-    border-radius:0;
+    section {
+        border: 1px dotted grey;
+        width: 100%;
+    }
+    /* End Footer */
+    
 }
 
-iframe{
-    padding-right: 55px;
+@media (max-width: 575px) {
+    #quick {
+        height: 155px;
+    }
+    #socia {
+        height: 210px;
+    }
+    #scroll {
+        height: 175px;
+    }
 }
 
-.blue{
-    background:#2196f3 !important;
+
+
+/* Media - Queries */
+
+@media screen and (min-width: 769px) {
+    
+    .nav-toggle-label {
+        display: none;
+    }
 }
 
-.animatedproject{
-    backdrop-filter: blur(18px)
+@media all and (max-width: 1024px) {
+    .imgabout{
+        width:75%;
+        height: 300px;
+       
+    }
+    .back{
+        height: 75vh;
+    }
+    .wrapper{
+        height: 20vh
+    }
+    .context img {
+        width: 120px;
+    }
+
+    .context h1{
+    
+        font-size: 38px;
+      }
+    .context h3{
+        
+        font-size:18px;
+      }
+    .area,.container-fluid{
+          height: 65vh
+      }
+    .text-desc p{
+          font-size:18px
+      }
+    .btnglow a button{
+          height: 5vh;
+      }
+
+    
+    .project-header .row div:first-child {
+    top: 0%;
+    transform: translate(0%, 0%);
+}
+    .header-left img {
+        height: 36px;
+    }
+    .header-right-link {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+    .header-left {
+        margin-top: 8px;
+    }
+    .header-right {
+        margin-top: 14px;
+    }
 }
 
-.forcss{
-    top:none;
-    transform:none
+@media all and (max-width: 769px) {
+    .imgabout{
+        width:80%;
+        height: 230px;
+       
+    }
+    .back{
+        height: 80vh;
+    }
+    
+    .header-left {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .header-right {
+        flex-wrap: nowrap;
+        overflow: hidden;
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .header-right-link {
+        margin: 0;
+        margin-top: 4px;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 5px;
+    }
+    .header-right-link a {
+        margin: 0 0 3px 0;
+    }
+    .nav-toggle:checked~.header-right {
+        display: block;
+    }
+    .nav-toggle-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 10px;
+        margin-left: 16px;
+    }
 }
 
-.forcss1{
-    top: 50%;
-    transform: translate(0%,50%);
-}
 
-.csss{
-    background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url("{% static 'images/projects/project1.png' %}") center / cover no-repeat;
-}
-
-.contact-info .img-event{
-    width: 100%;
-    height:350px;
-    margin-top: 10vh;
-    overflow:hidden
-}
-.contact-info .img-event img{
-    width: 100%;
-    height:100%;
-   }
+/* ------------------- NAVBAR ENDS ------------------- */
