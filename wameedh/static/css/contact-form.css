@@ -211,9 +211,9 @@ a {
     letter-spacing: 0.3px;
 }
 @media screen and (min-width: 980px) {
-  .contact-info {
+  /* .contact-info {
     padding-left: 110px;
-  }
+  } */
   
 }
 

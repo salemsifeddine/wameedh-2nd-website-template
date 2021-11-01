@@ -16,3 +16,6 @@ admin.site.register(ApplicationFormBootcamp)
 admin.site.register(ContactUs)
 
 admin.site.register(BootCamp)
+admin.site.register(Gallery)
+admin.site.register(Project)
+admin.site.register(Team)

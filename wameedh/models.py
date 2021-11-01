@@ -66,3 +66,18 @@ class ClubEvents(models.Model):
 
     def __str__(self):
         return self.title
+
+class Gallery(models.Model):
+    image=models.ImageField(upload_to="gallery")
+    title=models.CharField(max_length=80)
+
+class Project(models.Model):
+    title=models.CharField(max_length=40)
+    owner=models.CharField(max_length=30)
+    text = models.TextField(blank=True)
+    link=models.TextField(blank=True)
+
+class Team(models.Model):
+    full_name=models.CharField(max_length=50)
+    image1=models.ImageField(upload_to="memebers")
+    image2=models.ImageField(upload_to="memebers")

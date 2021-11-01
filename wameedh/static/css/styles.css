@@ -15,6 +15,9 @@ body{
 /* ------------------ NAVBAR STARTS ---------------- */
 
 
+button{
+    border-radius: 3px;
+}
 /*a{
   font-size: 15px;
 }*/
@@ -137,9 +140,9 @@ body{
     border-radius:0;
 }
 
-iframe{
+/* iframe{
     padding-right: 55px;
-}
+} */
 
 .blue{
     background:#2196f3 !important;
