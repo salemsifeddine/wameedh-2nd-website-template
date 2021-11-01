@@ -21,13 +21,7 @@ class ClubAchivement(models.Model):
     def __str__(self):
         return self.title
 
-class ClubEvents(models.Model):
-    title=models.CharField(max_length=100)
-    description=models.TextField(blank=True)
-    images=models.ImageField(upload_to="clubEvents" ,blank=True)
 
-    def __str__(self):
-        return self.title
     
 
 class AboutUsInfo(models.Model):
@@ -53,4 +47,22 @@ class ContactUs(models.Model):
     email=models.EmailField(max_length=50);
     query=models.TextField(max_length=5000);
     
+class BootCamp(models.Model):
+    title=models.CharField(max_length=80);
+    description=models.TextField(blank=False,max_length=8000);
+    edition=models.CharField(max_length=10)
+    imageBackground=models.ImageField(upload_to="events")
+    imageEvent=models.ImageField(upload_to="eventsImage")
+    
+    def __str__(self):
+        return self.title
 
+class ClubEvents(models.Model):
+    title=models.CharField(max_length=100)
+    description=models.TextField(blank=True)
+    edition=models.CharField(max_length=10)
+    imageBackground=models.ImageField(upload_to="clubEvents" ,blank=True)
+    imageEvent=models.ImageField(upload_to="clubEventsImages" ,blank=True)
+
+    def __str__(self):
+        return self.title

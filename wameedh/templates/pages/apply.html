@@ -33,7 +33,7 @@
 
 {% block content %}
  <!-- PAGE HEADER START -->
- <div class="container-fluid project-header" style="background-color: #6266ae70;">
+ <div class="container-fluid project-header" >
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <span>Apply Now</span> <br>
@@ -44,6 +44,7 @@
         <div class="col-md-6 col-sm-12">
             <img class="img-responsive" src="{% static 'images/Project.png' %}" >
         </div>
+        <div style="position: absolute;top:0;left: 0;" class="absolute" id="particles-js"></div>
         
     </div>
 </div>
@@ -56,6 +57,10 @@
        APLLY NOW
     </h2>
     <div class="row contact-fields">
+
+
+
+
     <div class="col-md-8 left-form">
        <form method="post" action="">
           {% csrf_token %}
@@ -63,22 +68,22 @@
           <div class="form-group">
              <label class="sr-only" for="fname">First Name *</label>
              <!-- <input class="required form-control" id="fname" name="fname" placeholder="First Name&nbsp;*" type="text"> -->
-             {{forms.first_name}}
+             {{form.first_name}}
           </div>
           <div class="form-group">
              <label class="sr-only" for="lname">Last Name *</label>
              <!-- <input class="required form-control" id="lname" name="lname" placeholder="Last Name&nbsp;*" type="text"> -->
-             {{forms.last_name}}
+             {{form.last_name}}
           </div>
           <div class="form-group">
              <label class="sr-only" for="contactEmail">Email *</label>
              <!-- <input class="required form-control h5-email" id="contactEmail" name="contactEmail" placeholder="Email&nbsp;*" type="text"> -->
-             {{forms.email}}
+             {{form.email}}
           </div>
           <div class="form-group">
              <label class="sr-only" for="contactPhone">Phone *</label>
              <!-- <input class="required form-control h5-phone" id="contactPhone" name="contactPhone" placeholder="Phone&nbsp;*" type="text"> -->
-             {{forms.phone_number}}
+             {{form.phone_number}}
              <!-- ^^  form code  ^^ -->
             <div class="alert alert-info" style="display: none;"></div>
              <script>
@@ -109,29 +114,29 @@
           <div class="form-group">
             <label class="sr-only" for="contactPhone">Phone *</label>
             <!-- <input class="required form-control h5-phone" id="contactPhone" name="contactPhone" placeholder="Phone&nbsp;*" type="text"> -->
-            {{forms.place_living}}
+            {{form.place_living}}
          </div>
          <div class="form-group">
             <label class="sr-only" for="contactPhone">Phone *</label>
             <!-- <input class="required form-control h5-phone" id="contactPhone" name="contactPhone" placeholder="Phone&nbsp;*" type="text"> -->
-            {{forms.major_of_study}}
+            {{form.major_of_study}}
          </div>
          <div class="form-group">
             <label class="sr-only" for="contactPhone">Phone *</label>
             <!-- <input class="required form-control h5-phone" id="contactPhone" name="contactPhone" placeholder="Phone&nbsp;*" type="text"> -->
-            {{forms.year_of_study}}
+            {{form.year_of_study}}
          </div>
           <div class="form-group">
              <label class="sr-only" for="comment">Type your message here</label>
              <!-- <textarea class="required form-control" id="comment" name="comment" placeholder="Type your message here&nbsp;*" rows="6"></textarea> -->
-             {{forms.why}}
+             {{form.why}}
             </div>
           <button class="btn btn-accent blue" type="submit">Submit</button>  
        </form>
     </div>
     <div class="col-md-4 contact-info">
     <div class="img-event">
-       <img src="{% static 'images/holytech.jpg' %}" alt="">
+       <img src="{{object.imageEvent.url}}" alt="">
     </div>
     <div class="location">
        <h2>Visit</h2>

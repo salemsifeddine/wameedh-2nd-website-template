@@ -14,3 +14,5 @@ admin.site.register(AboutUsInfo)
 admin.site.register(ApplicationFormBootcamp)
 
 admin.site.register(ContactUs)
+
+admin.site.register(BootCamp)

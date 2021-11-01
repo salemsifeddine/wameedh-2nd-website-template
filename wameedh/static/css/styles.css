@@ -210,6 +210,12 @@ iframe{
     
     font-size:28px;
   }
+
+.fluid-cont-home{
+    width:100%;
+    height: 100vh;
+    position:relative
+}
 .area {
     /* background: white; */
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
@@ -1852,7 +1858,7 @@ a{
 
 .text-event{
     position: absolute;
-
+    width:100%
 }
 
 .text-event div h2{
@@ -1884,6 +1890,7 @@ a{
     border-radius: 3px;
     border: 2px solid #4885ed;
     transition:background .2s ease-in;
+    font-weight: bolder;
 }
 
 .btnglow button:hover{

@@ -36,14 +36,14 @@
   <div class="arrow bounce">
       <a href="#aboutus"><i class="fas fa-angle-double-down fa-2x" aria-hidden="true"></i></a>
   </div>
-  <div class="particles-js" id="particles-js">
-
-  </div>
+ 
 </div>
 
   
 <div class="area">
-  
+    <div style="position:absolute;top:0;left: 0;" id="particles-js">
+
+    </div>
   <!-- <ul class="square">
       <li></li>
       <li></li>
@@ -84,32 +84,67 @@
 <!-- Home Ends-->
 
 <!-- About Us Start -->
-<div id="abt-us">
-  <div class="back event">
-      
-      
-      <div class="text-event">
-          <div >
-              <h2>HolyTech</h2>
-          </div><br>
-      <div class="bcontainer-index text-desc">
-          <b class="title"><i>Who are we?</i></b><br><br>
-          <p>Wameedh is a scientific club founded by IGEE Students 
-              (ex INELEC) in 2016. We aim to learn, practice and innovate in the 
-              fields of electronics and new technologies. We focus on developing technical 
-              skills, we offer many workshops in the field of Electronics and Electrical 
-              Engineering (Robotics, Embedded Systems, AI...).
-          </p>
-          <div class="btnglow">
-              <a href="{% url 'apply' %}"><button class="submit">Register Now</button></a>
-          </div>
-      </div>
-      </div>
-      <div class="backimg">
-          <img src="{% static 'images/wam.jpg' %}" alt="">
-      </div>     
-  </div>
+<div   id="abt-us">
   
+    
+
+    {% for event in events %}
+
+    <div class="back event">
+      
+      
+        <div class="text-event">
+            <div >
+                <h2>{{event.title}}</h2>
+            </div><br>
+        <div class="bcontainer-index text-desc">
+            <b class="title"><i>More About The Event:</i></b><br><br>
+            <p>{{event.description}}
+            </p>
+            <div class="btnglow">
+                <a href="{% url 'applyEvent' event.id %}"><button class="submit">Register Now</button></a>
+            </div>
+        </div>
+        </div>
+        <div class="backimg">
+            
+            <img src="{{event.imageBackground.url }}" alt="">
+        </div>     
+    </div>
+    {% empty %}
+
+
+    {% endfor %}
+    {% for btcmp in bootcamps %}
+
+    <div class="back event">
+      
+      
+        <div class="text-event">
+            <div >
+                <h2>{{btcmp.title}}</h2>
+            </div><br>
+        <div class="bcontainer-index text-desc">
+            <b class="title"><i>More About The Event:</i></b><br><br>
+            <p>{{btcmp.description}}
+            </p>
+            <div class="btnglow">
+                <a href="{% url 'applyBootcamp' btcmp.id %}"><button class="submit">Register Now</button></a>
+            </div>
+        </div>
+        </div>
+        <div class="backimg">
+            
+            <img src="{{btcmp.imageBackground.url }}" alt="">
+            
+        </div>     
+    </div>
+    {% empty %}
+
+
+    {% endfor %}
+
+    
   <!---->
   <div id="aboutus" class="back aboutus">
       
