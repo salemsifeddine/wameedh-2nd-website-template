@@ -8,7 +8,9 @@ class Members(models.Model):
     name=models.CharField(max_length=30)
     position=models.CharField(max_length=50)
     description=models.TextField(blank=True)
-    photo=models.ImageField(upload_to="members_images", null=True)
+    image1=models.ImageField(upload_to="memebers")
+    image2=models.ImageField(upload_to="memebers")
+
 
     def __str__(self):
         return self.name
@@ -40,12 +42,17 @@ class ApplicationFormBootcamp(models.Model):
     year_of_study=models.CharField(max_length=50);
     why=models.TextField(max_length=5000);
     phone_number = PhoneNumberField(blank=True,)
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
 
 class ContactUs(models.Model):
     first_name=models.CharField(max_length=50);
     last_name=models.CharField(max_length=50);
     email=models.EmailField(max_length=50);
     query=models.TextField(max_length=5000);
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
     
 class BootCamp(models.Model):
     title=models.CharField(max_length=80);
@@ -70,14 +77,16 @@ class ClubEvents(models.Model):
 class Gallery(models.Model):
     image=models.ImageField(upload_to="gallery")
     title=models.CharField(max_length=80)
+    def __str__(self):
+        return f"{self.title}"
 
 class Project(models.Model):
     title=models.CharField(max_length=40)
+    image=models.ImageField(upload_to="projects")
     owner=models.CharField(max_length=30)
     text = models.TextField(blank=True)
     link=models.TextField(blank=True)
+    def __str__(self):
+        return f"{self.title}"
 
-class Team(models.Model):
-    full_name=models.CharField(max_length=50)
-    image1=models.ImageField(upload_to="memebers")
-    image2=models.ImageField(upload_to="memebers")
+

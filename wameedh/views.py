@@ -62,14 +62,17 @@ def contactUs(request):
     return render(request,"pages/contactus.html",{"forms":form})
 
 def gallery(request):
+    gallery=Gallery.objects.all()
 
-    return render(request,"pages/gallery.html",{})
+    return render(request,"pages/gallery.html",{"gallery":gallery})
 
 def projects(request):
-    return render(request,"pages/projects.html",{})
+    projects=Project.objects.all()
+    return render(request,"pages/projects.html",{"projects":projects})
 
 def team(request):
-    return render(request,"pages/team.html",{})
+    teams=Members.objects.all()
+    return render(request,"pages/team.html",{"teams":teams})
 
 
 

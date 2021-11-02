@@ -20,25 +20,27 @@
 <!-- PAGE HEADER END -->
 
 <!-- PROJECT CARD LIST START -->
-<div class="container-fluid project-card-list">
+<div class="project-card-list">
     <div class="row">
+        {% for project in projects %}
         <div class="example-2 card col-md-4">
-            <div class="wrapper" style='background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url("static/images/projects/project1.png") center / cover no-repeat;'>
+            <div class="wrapper" style='background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url({{project.image.url}}) center / cover no-repeat;'>
                 <div class="header">
                     <div class="h4">
-                        #1
+                        #{{project.id}}
                     </div>
                 </div>
                 <div class="data" style="backdrop-filter: blur(18px);">
                     <div class="content">
-                        <span class="author">Web Application</span>
-                        <h1 class="title"><a href="#">DSC RRU Website</a></h1>
-                        <p class="text">The website of Developer Student Club at Rashtriya Raksha University developed by the members of the club.</p>
+                        <span class="author">{{project.owner}}</span>
+                        <h1 class="title"><a href="{{project.link}}">{{project.title}}</a></h1>
+                        <p class="text">{{project.text}}</p>
                         <a href="https://dsc-rsu.github.io/DSC-RRU-Website/" class="button">sifoo</a>
                     </div>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 </div>
 <!-- PROJECT CARD LIST END -->

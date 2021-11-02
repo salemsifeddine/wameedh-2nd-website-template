@@ -21,183 +21,25 @@
 
 <div class="container-fluid">
     <div class="row" style="margin-top: 50px;margin-bottom: 50px;display:block">
+        {% for gall in gallery %}
         <div class="col-md-4 col-sm-6 col-xs-12 bcontainer">
             <div class="card">
                 <div class="face face1">
                     <div class="content">
                         <div class="icon">
-                            <img src="{% static  'images/gallery/gal1.jpg' %}" style="height: 250px; width: 300px;" />
+                            <a href="{{gall.image.url}}"><img src="{{gall.image.url}}" style="height: 250px; width: 300px;" /></a>
                         </div>
                     </div>
                 </div>
                 <div class="face face2">
                     <div class="content">
-                        <p>This was Microsoft Azure Session.</p>
+                        <p>{{gall.title}}</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12 bcontainer">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="{%  static 'images/gallery/gal2.jpg' %}" style="height: 250px; width: 300px;" />
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>Esteemed Faculty @RRU</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12 bcontainer">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="{%  static 'images/gallery/gal3.jpg' %} style="height: 250px; width: 300px;" />
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>Cyber Security Session.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12 bcontainer">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="{% static  'images/gallery/gal4.jpg' %}" style="height: 250px; width: 300px;" />
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>Techno Castle 2k19</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12 bcontainer">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="{%  static 'images/gallery/gal5.jpg' %}" style="height: 250px; width: 300px;" />
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>Azure Workshop</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12 bcontainer">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="{%  static 'images/gallery/gal6.jpg' %}" style="height: 250px; width: 300px;" />
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>faculty's meet-up</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12 bcontainer">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="{% static  'images/gallery/gal7.jpg' %}" style="height: 250px; width: 300px;" />
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>Techno Castle preparation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12 bcontainer">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="{% static 'images/gallery/gal8.jpg' %}" style="height: 250px; width: 300px;" />
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>Faculty Validation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12 bcontainer">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="{% static 'images/gallery/gal8.jpg' %}" style="height: 250px; width: 300px;" />
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>Faculty Validation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12 bcontainer">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="{% static 'images/gallery/gal8.jpg' %}" style="height: 250px; width: 300px;" />
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>Faculty Validation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
         
-        <div class="col-md-4 col-sm-6 col-xs-12 bcontainer">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <div class="icon">
-                            <img src="{% static 'images/gallery/gal9.jpg' %}" style="height: 250px; width: 300px;" />
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>Techno Castle Preps</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 {% endblock content %}

@@ -1,4 +1,4 @@
-const texts = ['We Are Creative Ners', 'We Want to Blow the Wold', 'We Are Wameedh'];
+const texts = ['We Are Creative Nerds', 'We Want to Blow the Wold', 'We Are Wameedh'];
 let count = 0;
 let index = 0;
 let currentText = '';
@@ -18,6 +18,6 @@ let letter = '';
         index = 0;
     }
 
-   setTimeout(type, 400);
+   setTimeout(type, 300);
 
 }());

@@ -15,7 +15,7 @@
  <!-- Home Starts-->
  <div class="context contextt">
   
-  <img id="logoimg" src=".{% static 'images/DSC_LOGO.png' %}">
+  <img  id="logoimg" src=".{% static 'images/DSC_LOGO.png' %}">
   <!-- <h1>Wameedh Scientifique Club</h1> -->
   
     <h1>
@@ -167,7 +167,13 @@
      
       
   </div>
-  <div class="back nobck trusted">
+  <video width="320" height="240" >
+    <source src="{% static 'videos/DSC_LOGO_1.mov' %}" type="video/mp4">
+    
+  Your browser does not support the video tag.
+  </video> 
+  
+  <!-- <div class="back nobck trusted">
       <br><br><br>
       <div ><h2>Trusted by </h2></div><br>
       <div class="bcontainer-index">
@@ -192,7 +198,7 @@
       </div>
       <br><br>
       
-  </div>
+  </div> -->
 
 {% endblock content %}
 
