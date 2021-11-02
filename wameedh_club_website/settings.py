@@ -43,12 +43,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    ""
 ]
 
 ROOT_URLCONF = 'wameedh_club_website.urls'
@@ -142,10 +144,15 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
-STATIC_URL = '/static/'
-STATIC_ROOT= os.path.join(BASE_DIR,"saticfiles")
 
+STATIC_ROOT= os.path.join(BASE_DIR,"saticfiles")
+STATIC_URL = '/static/'
 MEDIA_URL='/images/'
+
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,"static",)
+]
+
 MEDIA_ROOT= os.path.join(BASE_DIR,"static/images")
 
 LOGIN_REDIRECT_URL = "home"
