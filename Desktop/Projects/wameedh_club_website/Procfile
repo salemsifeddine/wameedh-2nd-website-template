@@ -1,0 +1,1 @@
+web: gunicorn wameedh_club_website.wsgi --log-file -

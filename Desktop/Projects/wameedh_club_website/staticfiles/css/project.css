@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body {
+    background-image: linear-gradient(to right, #025c91 , rgb(85, 180, 235));
+
+}
+html {
+    scroll-behavior: smooth;
+}
+.main {
+  background-image: url(Space/pexels-ali-arapoğlu-4432037.jpg);
+  background-size: cover;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(202, 219, 238);
+    background-repeat: no-repeat;
+
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: 250;
+    padding-top: .5em;
+}
+.form {
+    padding-top: 2em;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    color: #103d66;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.85);
+    opacity: 1;
+    border-radius: 20px;
+    animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+}
+@keyframes shadow-drop-center {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+  
+.form span {
+    font-size: 1.2rem;
+    padding: 0;
+}
+.form h2 {
+    /*text-align: center;*/
+    padding-top: .5em;
+}
+.form h2 li {
+  list-style: none;
+}
+.box input:focus, .box textarea:focus{
+  width: 280px;
+  border-color: rgb(85, 180, 235);
+
+}
+.box input, .box textarea{
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  border: 2px solid rgb(30, 93, 153);
+  padding: 14px 10px;
+  width: 450px;
+  outline: none;
+  color: rgb(30, 93, 153);
+  border-radius: 24px;
+  transition: 0.5s;
+
+}
+.box input[type="text"] {
+    height: 1.5em;
+}
+.box textarea{
+    height: 5em;
+}
+.box input[type="text"]:focus,.box textarea:focus {
+    width: 22em;
+}
+
+
+footer p {
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+    font-size: 1.2rem;
+}
+.bounce-top {
+  border-right: 2px solid rgb(30, 93, 153);
+  width: 60%;
+  padding: 8rem 0;
+  /*margin-bottom: 30em;*/
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: relative;
+}
+.bounce-top h1 {
+  font-weight: bold;
+  font-size: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+.bounce-top p {
+  font-size: 1.5em;
+  width: 90%;
+  text-align: center;
+  padding-left: 30px;
+}
+.bounce-top h3 {
+  text-align: center;
+  padding-top: 4em;
+  font-size: 1.5em;
+}
+.bounce-top img {
+  width: 300px;
+  margin: auto ;
+}
+.box {
+  padding-right: 2rem;
+  width: 60%;
+  padding-left: 1em;
+  padding-top: 3em;
+}
+@media screen and (max-width:414px) {
+  .form {
+    flex-direction: column;
+  }
+  .form .bounce-top {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    border-right: 0px;
+    padding-right: 10px;
+    border-bottom: 1px solid #025c91;
+  }
+  .form .bounce-top img {
+    width: 300px;
+  }
+  .bounce-top h1 {
+    font-size: 1.3em;
+  }
+  .bounce-top p {
+    font-size: 1em;
+  }
+  .bounce-top h3 {
+    padding-top: 1em;
+    font-size: 1.2em;
+  }
+  .box {
+    width: 90%;
+    padding: 0 0 0 0;
+  }
+  .box h2 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .box input, .box textarea {
+    width: 100%;
+  }
+  .box input[type="text"]:focus,.box textarea:focus {
+    width: 90%;
+}
+}
+

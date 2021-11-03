@@ -1,0 +1,209 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+           {% block style %}
+           <style>
+            @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+            
+            </style>
+{% endblock style %}
+        <!-- <title>Wameedh - Main</title> -->
+    
+
+{% block content %}
+
+ <!-- Home Starts-->
+ <div class="context contextt">
+  
+  <img  id="logoimg" src=".{% static 'images/DSC_LOGO.png' %}">
+  <!-- <h1>Wameedh Scientifique Club</h1> -->
+  
+    <h1>
+      <span>W</span>
+      <span>A</span>
+      <span>M</span>
+      <span>E</span>
+      <span>E</span>
+      <span>D</span>
+      <span>H</span>
+    </h1>
+
+  <h3>Electrical & Electronics Engineering Students</h3>
+  <div class="intro">               
+      <h2 class="typing">HolyTech Event </h2>
+ </div>
+ 
+  <div class="arrow bounce">
+      <a href="#aboutus"><i class="fas fa-angle-double-down fa-2x" aria-hidden="true"></i></a>
+  </div>
+ 
+</div>
+
+  
+<div class="area">
+    <div style="position:absolute;top:0;left: 0;" id="particles-js">
+
+    </div>
+  <!-- <ul class="square">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+  </ul>
+  <ul class="triangles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+  </ul>
+  <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+  </ul> -->
+</div>
+<!-- Home Ends-->
+
+<!-- About Us Start -->
+<div   id="abt-us">
+  
+    
+
+    {% for event in events %}
+
+    <div class="back event">
+      
+      
+        <div class="text-event">
+            <div >
+                <h2>{{event.title}}</h2>
+            </div><br>
+        <div class="bcontainer-index text-desc">
+            <b class="title"><i>More About The Event:</i></b><br><br>
+            <p>{{event.description}}
+            </p>
+            <div class="btnglow">
+                <a href="{% url 'applyEvent' event.id %}"><button class="submit">Register Now</button></a>
+            </div>
+        </div>
+        </div>
+        <div class="backimg">
+            
+            <img src="{{event.imageBackground.url }}" alt="">
+        </div>     
+    </div>
+    {% empty %}
+
+
+    {% endfor %}
+    {% for btcmp in bootcamps %}
+
+    <div class="back event">
+      
+      
+        <div class="text-event">
+            <div >
+                <h2>{{btcmp.title}}</h2>
+            </div><br>
+        <div class="bcontainer-index text-desc">
+            <b class="title"><i>More About The Event:</i></b><br><br>
+            <p>{{btcmp.description}}
+            </p>
+            <div class="btnglow">
+                <a href="{% url 'applyBootcamp' btcmp.id %}"><button class="submit">Register Now</button></a>
+            </div>
+        </div>
+        </div>
+        <div class="backimg">
+            
+            <img src="{{btcmp.imageBackground.url }}" alt="">
+            
+        </div>     
+    </div>
+    {% empty %}
+
+
+    {% endfor %}
+
+    
+  <!---->
+  <div id="aboutus" class="back aboutus">
+      
+      <div ><h2>About Us</h2></div>
+      <div class="imgabout">
+          <div class="imgabt">
+             <img src="{% static 'images/wamedh.jpg' %}" alt="">
+          </div>
+          
+      </div>
+      <div class="bcontainer-index">
+          <b class="title"><i>Who are we?</i></b>
+          <p>Wameedh is a scientific club founded by IGEE Students 
+              (ex INELEC) in 2016. We aim to learn, practice and innovate in the 
+              fields of electronics and new technologies. We focus on developing technical 
+              skills, we offer many workshops in the field of Electronics and Electrical 
+              Engineering (Robotics, Embedded Systems, AI...).
+          </p>
+      </div>
+     
+      
+  </div>
+  <video width="320" height="240" >
+    <source src="{% static 'videos/DSC_LOGO_1.mov' %}" type="video/mp4">
+    
+  Your browser does not support the video tag.
+  </video> 
+  
+  <!-- <div class="back nobck trusted">
+      <br><br><br>
+      <div ><h2>Trusted by </h2></div><br>
+      <div class="bcontainer-index">
+          <div class="trustimgs">
+              <div class="trustimg">
+                  <img src="{% static 'images/DSC_LOGO.png' %}" alt="">
+              </div>
+              <div class="trustimg">
+                  <img src="{% static 'images/DSC_LOGO.png' %}" alt="">
+
+              </div>
+          </div>
+         <div class="btnglow">
+          <a class="btnneon btnpartner" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              become partner
+            </a>
+         </div>
+      </div>
+      <br><br>
+      
+  </div> -->
+
+{% endblock content %}
+
+
+{% block js %}
+  
+  
+{% endblock js %}

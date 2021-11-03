@@ -1,0 +1,45 @@
+{% extends "pages/base.html" %}
+{% load static  %}
+
+{% block content %}
+<!-- PAGE HEADER START -->
+<div class="container-fluid project-header">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <span>Projects</span> <br>
+            <p>Let us go through some of the projects our team have made :)</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <img class="img-responsive" src="{% static 'images/Gallery.png' %}" Illustration">
+        </div>
+        <div style="position: absolute;top:0;left: 0;" class="absolute" id="particles-js"></div>
+    </div>
+</div>
+
+<!-- PAGE HEADER END -->
+
+
+<div class="container-fluid">
+    <div class="row" style="margin-top: 50px;margin-bottom: 50px;display:block">
+        {% for gall in gallery %}
+        <div class="col-md-4 col-sm-6 col-xs-12 bcontainer">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <div class="icon">
+                            <a href="{{gall.image.url}}"><img src="{{gall.image.url}}" style="height: 250px; width: 300px;" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>{{gall.title}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+{% endblock content %}

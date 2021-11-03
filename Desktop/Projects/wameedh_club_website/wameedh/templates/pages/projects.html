@@ -1,0 +1,48 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+ <!-- PAGE HEADER START -->
+ <div class="container-fluid project-header"  ">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <span>Projects</span> <br>
+            <p>Let us go through some of the projects our team have made :)</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <img class="img-responsive" src="{% static 'images/Project.png'%}" >
+        </div>
+        <div style="position: absolute;top:0;left: 0;" class="absolute" id="particles-js"></div>
+    </div>
+</div>
+<!-- PAGE HEADER END -->
+
+<!-- PROJECT CARD LIST START -->
+<div class="project-card-list">
+    <div class="row">
+        {% for project in projects %}
+        <div class="example-2 card col-md-4">
+            <div class="wrapper" style='background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url({{project.image.url}}) center / cover no-repeat;'>
+                <div class="header">
+                    <div class="h4">
+                        #{{project.id}}
+                    </div>
+                </div>
+                <div class="data" style="backdrop-filter: blur(18px);">
+                    <div class="content">
+                        <span class="author">{{project.owner}}</span>
+                        <h1 class="title"><a href="{{project.link}}">{{project.title}}</a></h1>
+                        <p class="text">{{project.text}}</p>
+                        <a href="https://dsc-rsu.github.io/DSC-RRU-Website/" class="button">sifoo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- PROJECT CARD LIST END -->
+
+{% endblock content %}

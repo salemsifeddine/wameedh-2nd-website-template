@@ -1,0 +1,61 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+ <!-- Navigation Bar Ends -->
+ <div class="container-fluid project-header" >
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <span>Projects</span> <br>
+            <p>Let us go through some of the projects our team have made :)</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <img class="img-responsive" src="{% static 'images/teams.png' %}" Illustration">
+        </div>
+        <div style="position: absolute;top:0;left: 0;" class="absolute" id="particles-js"></div>
+    </div>
+</div>
+
+
+<div class="team-content" style="display:flex;justify-content:space-around">
+    {% for member in teams %}
+    
+        <!-- team-card -->
+        {% if member.position == "Président" %}
+        <div class="team-card">
+            <div>
+                <img src="{{member.image1.url}}" class="icon-inactive">
+                <img src="{{member.image2.url}}" class="icon">
+            </div>
+            <p class="team-title">{{member.name}}</p>
+            <p class="team-text" id="{{member.id}}">{{member.position}}</p>
+        </div>
+        {% endif %}
+    
+    {% endfor %}
+</div>
+
+<div class="team-content">
+{% for member in teams %}
+
+    <!-- team-card -->
+    {% if member.position != "Président" %}
+    <div class="team-card">
+        <div>
+            <img src="{{member.image1.url}}" class="icon-inactive">
+            <img src="{{member.image2.url}}" class="icon">
+        </div>
+        <p class="team-title">{{member.name}}</p>
+        <p class="team-text" id="{{member.id}}">{{member.position}}</p>
+    </div>
+    {% endif %}
+    <!-- end team-card -->
+    <!-- team-card -->
+    
+    <!-- end team-card -->
+
+{% endfor %}
+</div>
+{% endblock content %}
